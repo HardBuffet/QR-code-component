@@ -62,10 +62,16 @@
   min-height: 100vh;
 }
 
-.qr-app {
+.page__header {
+  margin: auto; /* center H && V */
+}
+
+.page__qr-app {
   width: 20rem; /* fallback */
   width: clamp(20rem, 19.34rem + 2.817vw, 21.88rem);
-  margin: auto; /* center H && V */
+}
+
+.qr-app {
   padding: 17px;
   text-align: center;
 }
