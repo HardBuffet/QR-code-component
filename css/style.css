@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+  /* PALETTE */
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+
+  --pageBg: var(--lightGray);
+  --pageColor: var(--darkBlue);
+  --qrAppBg: var(--white);
+  --qrAppDescColor: var(--grayishBlue);
+
+  /* FONTS */
+  --mainFont: "Outfit", sans-serif;
+  --mainFontRegular: 400;
+  --mainFontBold: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LOOK */
+.page {
+  background: var(--pageBg);
+  color: var(--pageColor);
+  font-family: var(--mainFont);
+  font-weight: var(--mainFontRegular);
+}
+
+.qr-app {
+  background: var(--qrAppBg);
+  border-radius: 20px;
+}
+
+.qr-code {
+  overflow: hidden; /* to be sure that everything will be cut */
+}
+
+.qr-app__img {
+  border-radius: 11px;
+}
+
+.qr-app__title {
+  font-weight: var(--mainFontBold);
+}
+
+.qr-app__desc {
+  color: var(--qrAppDescColor);
+}
+
+/* TYPOGRAPHY */
+.page {
+  font-size: 15px;
+  display: grid;
+  min-height: 100vh;
+}
+
+.qr-app {
+  width: 20rem; /* fallback */
+  width: clamp(20rem, 19.34rem + 2.817vw, 21.88rem);
+  margin: auto; /* center H && V */
+  padding: 17px;
+  text-align: center;
+}
+
+.qr-app__img {
+  width: 100%;
+}
+
+.qr-app__title {
+  font-size: 1.5rem;
+  margin: 20px 0 15px;
+}
+
+.qr-app__desc {
+  font-size: 1rem;
+  margin: 10px 10px 20px; /* fallback */
+  margin: 10px clamp(0.625rem, 0.405rem + 0.939vw, 1.25rem) 20px;
+  line-height: 1.25rem;
+}
+
+/* additional 'challenge' */
+.attribution {
+  text-align: center;
+}
